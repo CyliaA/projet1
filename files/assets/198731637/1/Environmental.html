@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Experience</title>
+</head>
+<body>
+
+    <div class="survey-container">
+
+        <!-- Questions -->
+        <div id="question-1" class="question active">
+            <h1 id="main-question">How aware are you of the environmental systems that infuluence your daily wellbeing ( e.g., air quality, water, green spaces) ?</h1>
+            <div class="rating-buttons">
+                <button class="rating-btn" onclick="nextQuestion(1)">Ver aware</button>
+                <button class="rating-btn" onclick="nextQuestion(1)">Somewaht aware</button>
+                <button class="rating-btn" onclick="nextQuestion(1)">Neutral</button>
+                <button class="rating-btn" onclick="nextQuestion(1)">Not very aware</button>
+                <button class="rating-btn" onclick="nextQuestion(1)">Not aware at all</button>
+            </div>
+        </div>
+
+        <div id="question-2" class="question">
+            <h1 id="main-question">How do you think your local environment (urban design, natural surroundings) impacts your mental and physical health?</h1>
+            <div class="rating-buttons">
+                <button class="rating-btn" onclick="nextQuestion(2)">Very positively</button>
+                <button class="rating-btn" onclick="nextQuestion(2)">Somewhat positively</button>
+                <button class="rating-btn" onclick="nextQuestion(2)">Neutral</button>
+                <button class="rating-btn" onclick="nextQuestion(2)">Somewhat negatively</button>
+                <button class="rating-btn" onclick="nextQuestion(2)">Very negatively</button>
+            </div>
+        </div>
+
+       
+        <!-- Partie dans le fichier HTML -->
+    <div id="question-3" class="question">
+    <h1 id="main-question">How do the environmental systems you interact with daily (like transportation, energy use, or access to nature) affect your overall wellbeing?</h1>
+    <textarea id="exercise_routine" placeholder="Describe your routine..."></textarea><br>
+    <button class="rating-btn submit-btn" onclick="submitSurvey()">Submit</button>
+
+    </div>
+
+
+</body>
+</html>

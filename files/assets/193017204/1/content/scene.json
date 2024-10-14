@@ -1,0 +1,174 @@
+{
+	"scene": {
+		"version": 1,
+		"assets": {
+			"renders": {
+				"Cylinder.006": {
+					"index": 0,
+					"meshes": 2,
+					"skinned": false,
+					"vertices": 4824,
+					"triangles": 1822,
+					"attributes": {
+						"POSITION": 1,
+						"NORMAL": 1,
+						"TEXCOORD_0": 1
+					}
+				},
+				"Cylinder.007": {
+					"index": 1,
+					"meshes": 2,
+					"skinned": false,
+					"vertices": 4824,
+					"triangles": 1822,
+					"attributes": {
+						"POSITION": 1,
+						"NORMAL": 1,
+						"TEXCOORD_0": 1
+					}
+				},
+				"Plane.002": {
+					"index": 2,
+					"meshes": 1,
+					"skinned": false,
+					"vertices": 132,
+					"triangles": 96,
+					"attributes": {
+						"POSITION": 1,
+						"NORMAL": 1,
+						"TEXCOORD_0": 1
+					}
+				}
+			},
+			"materials": [
+				"Pattern2",
+				"Button.001",
+				"Pattern1",
+				"Button",
+				"rug"
+			]
+		},
+		"entities": {
+			"0": {
+				"name": "RootNode",
+				"parent": -1,
+				"position": [
+					0,
+					0,
+					0
+				],
+				"rotation": [
+					0,
+					0,
+					0
+				],
+				"scale": [
+					0.01,
+					0.01,
+					0.01
+				],
+				"scaleCompensation": false,
+				"children": [
+					1,
+					2,
+					3
+				]
+			},
+			"1": {
+				"name": "BeanBag2",
+				"parent": 0,
+				"position": [
+					110.406,
+					45.7349,
+					-9.30951
+				],
+				"rotation": [
+					0,
+					42.0176,
+					0
+				],
+				"scale": [
+					1,
+					1,
+					1
+				],
+				"scaleCompensation": false,
+				"children": [
+
+				],
+				"components": {
+					"render": {
+						"id": "Cylinder.006",
+						"materials": [
+							"Pattern2",
+							"Button.001"
+						]
+					}
+				}
+			},
+			"2": {
+				"name": "BeanBag1",
+				"parent": 0,
+				"position": [
+					-109.793,
+					45.7349,
+					-13.1663
+				],
+				"rotation": [
+					-0,
+					-168.673,
+					-0
+				],
+				"scale": [
+					1,
+					1,
+					1
+				],
+				"scaleCompensation": false,
+				"children": [
+
+				],
+				"components": {
+					"render": {
+						"id": "Cylinder.007",
+						"materials": [
+							"Pattern1",
+							"Button"
+						]
+					}
+				}
+			},
+			"3": {
+				"name": "Rug",
+				"parent": 0,
+				"position": [
+					0,
+					0,
+					0
+				],
+				"rotation": [
+					0,
+					0,
+					0
+				],
+				"scale": [
+					1,
+					1,
+					1
+				],
+				"scaleCompensation": false,
+				"children": [
+
+				],
+				"components": {
+					"render": {
+						"id": "Plane.002",
+						"materials": [
+							"rug"
+						]
+					}
+				}
+			}
+		}
+	}
+}

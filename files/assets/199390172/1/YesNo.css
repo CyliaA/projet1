@@ -1,0 +1,75 @@
+/* Styling the body */
+body {
+    font-family: 'Arial', sans-serif; /* Police pour le corps */
+    background-color: #f5f5f5; /* Couleur de fond douce */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Hauteur de la fenêtre */
+    text-align: center;
+}
+
+/* Conteneur pour centrer le contenu */
+.chat-containe {
+    background-color: #ffffff; /* Fond blanc pour le conteneur */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    width: 90%;
+    max-width: 400px; /* Limite de largeur pour éviter que ce soit trop large */
+    display: flex;
+    flex-direction: column; /* Pour aligner les éléments verticalement */
+    justify-content: center; /* Centrer le contenu verticalement */
+    align-items: center; /* Centrer les boutons horizontalement */
+}
+
+/* Style général pour les boutons */
+button {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 120px; /* Largeur uniforme pour les boutons */
+}
+
+/* Style pour le bouton "Yes" */
+#assistance-button-yes {
+    background-color: #41D1B1; /* Vert */
+    color: white;
+}
+
+#assistance-button-yes:hover {
+    background-color: #3bb39c; /* Vert foncé au survol */
+    border-color: #3bb39c;
+}
+
+/* Style pour le bouton "No" */
+#assistance-button-no {
+    background-color: #dc3545; /* Rouge */
+    color: white;
+}
+
+#assistance-button-no:hover {
+    background-color: #c82333; /* Rouge foncé au survol */
+    border-color: #bd2130;
+}
+
+/* Ajustements sur mobile */
+@media (max-width: 600px) {
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .cont1 {
+        padding: 20px;
+        width: 100%;
+    }
+}

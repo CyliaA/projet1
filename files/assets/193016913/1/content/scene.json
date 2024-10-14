@@ -1,0 +1,120 @@
+{
+	"scene": {
+		"version": 1,
+		"assets": {
+			"renders": {
+				"objRetro_TV": {
+					"index": 0,
+					"meshCount": 6,
+					"skinned": false
+				},
+				"Screen": {
+					"index": 1,
+					"meshCount": 1,
+					"skinned": false
+				}
+			},
+			"materials": [
+				"Material #25",
+				"Black",
+				"White",
+				"Front",
+				"Body",
+				"Silver"
+			]
+		},
+		"entities": {
+			"0": {
+				"name": "RootNode",
+				"parent": -1,
+				"position": [
+					0,
+					0,
+					0
+				],
+				"rotation": [
+					0,
+					0,
+					0
+				],
+				"scale": [
+					0.0254,
+					0.0254,
+					0.0254
+				],
+				"scaleCompensation": false,
+				"children": [
+					1,
+					2
+				]
+			},
+			"1": {
+				"name": "objRetro_TV",
+				"parent": 0,
+				"position": [
+					0,
+					0,
+					0
+				],
+				"rotation": [
+					-90,
+					-0,
+					0
+				],
+				"scale": [
+					1,
+					1,
+					1
+				],
+				"scaleCompensation": false,
+				"children": [
+
+				],
+				"components": {
+					"render": {
+						"id": "objRetro_TV",
+						"materials": [
+							"Material #25",
+							"Black",
+							"White",
+							"Front",
+							"Body",
+							"Silver"
+						]
+					}
+				}
+			},
+			"2": {
+				"name": "Screen",
+				"parent": 0,
+				"position": [
+					0,
+					0,
+					0
+				],
+				"rotation": [
+					-90,
+					-0,
+					0
+				],
+				"scale": [
+					1,
+					1,
+					1
+				],
+				"scaleCompensation": false,
+				"children": [
+
+				],
+				"components": {
+					"render": {
+						"id": "Screen",
+						"materials": [
+							"Black"
+						]
+					}
+				}
+			}
+		}
+	}
+}

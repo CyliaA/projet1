@@ -1,0 +1,309 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7;
+    position: absolute;
+}
+
+.chat-container {
+    position: absolute; 
+    top: 50%; 
+    left: 70%; 
+    transform: translate(-50%, -50%) scale(0); 
+    background: rgba(39, 39, 39, 0.7); 
+    color: #fff; 
+    padding: 1.4rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+    pointer-events: auto;
+    width: 550px; 
+    max-width: 90%;
+    height: 600px; 
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px; 
+    overflow: auto; 
+    backdrop-filter: blur(8px); 
+    animation: pop-up 0.6s forwards; /* Animation pop-up */
+}
+
+.element {
+    position: absolute; 
+    top: 30%; 
+    left: 20%; 
+    transform: translate(-50%, -50%) scale(0); 
+    background: rgba(39, 39, 39, 0.7); 
+    color: #fff; 
+    padding: 1.4rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+    pointer-events: auto;
+    width: 250px; 
+    max-width: 90%;
+    height: 200px; 
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px; 
+    overflow: auto; 
+    backdrop-filter: blur(8px); 
+    animation: pop-up 0.6s forwards; /* Animation pop-up */
+
+}
+
+
+/* Grands écrans (ordinateurs de bureau) */
+@media (min-width: 1200px) {
+    .chat-container {
+        width: 40%; /* Réduire la largeur à 40% */
+        height: 70%; /* Réduire la hauteur à 60% */
+    }
+}
+
+/* Tablettes */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .chat-container {
+        width: 40%; /* Largeur de 60% pour les tablettes */
+        height: 60%; /* Hauteur de 70% pour les tablettes */
+    }
+}
+
+/* Mobiles */
+@media (max-width: 767px) {
+    .chat-container {
+        width: 50%; /* Largeur de 90% pour les mobiles */
+        height: 50%; /* Hauteur de 90% pour les mobiles */
+    }
+}
+
+
+@keyframes pop-up {
+    0% {
+        transform: translate(-50%, -50%) scale(0); /* Réduit à 0 au début */
+        opacity: 0; /* Invisible au début */
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1); /* À sa taille normale à la fin */
+        opacity: 1; /* Visible à la fin */
+    }
+}
+
+.chat-box {
+    flex: 1; /* Permet au chat-box de remplir l'espace restant */
+    overflow-y: auto; /* Activer le défilement vertical */
+    padding: 2px;
+    border-radius: 8px; /* Coins arrondis pour le chat-box */
+}
+
+.message {
+    margin: 10px 0;
+    padding: 8px; /* Réduire l'espace interne pour des messages plus compacts */
+    border-radius: 8px; /* Coins arrondis pour chaque message */
+    font-size: 0.875rem; /* Taille de la police réduite pour les messages */
+}
+
+.bot-message {
+    background-color: #e1e1e1;
+    color: #000;
+    align-self: flex-start;
+    animation: fade-in 0.5s ease; /* Animation d'apparition */
+
+}
+
+
+
+/* Animation pour le texte d'introduction */
+@keyframes fade-in {
+    from {
+        opacity: 0; /* Invisible au début */
+    }
+    to {
+        opacity: 1; /* Visible à la fin */
+    }
+}
+
+
+.user-message {
+    background-color: #41D1B1;
+    color: #fff;
+    align-self: flex-end;
+}
+
+#user-input {
+    flex: 1; /* Prendre tout l'espace restant */
+    padding: 10px;
+    border: none;
+    border-radius: 10px; /* Coins arrondis pour le champ de texte */
+    box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur totale */
+    height: 40px; /* Hauteur du champ de texte pour correspondre au bouton */
+    font-size: 1rem; /* Taille du texte */
+}
+
+/* Style pour le bouton "Quit" */
+#quit-btn {
+    margin-top: 10px;         /* Espacement au-dessus du bouton */
+    padding: 10px;            /* Espacement intérieur */
+    background-color: #41D1B1; /* Couleur de fond */
+    color: white;             /* Couleur du texte */
+    border: none;             /* Pas de bordure */
+    border-radius: 10px;       /* Coins arrondis */
+    cursor: pointer;          /* Curseur de main */
+    font-size: 16px;          /* Taille de la police */
+    height: 40px;             /* Hauteur du bouton pour correspondre au champ de texte */
+}
+
+
+/* Style pour le bouton "Quit" au survol */
+#quit-btn:hover {
+    background-color: #41D1B1; /* Couleur de fond au survol */
+}
+
+
+
+#send-btn:hover {
+    background-color: #41D1B1;
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+}
+
+.response-button {
+    display: inline-block;
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #41D1B1;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition douce */
+    font-size: 1rem; /* Taille du texte */
+}
+
+.response-button:hover {
+    background-color: #41D1B1;
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap; /* Permet d'aller à la ligne si nécessaire */
+    gap: 10px; /* Espace entre les boutons radio */
+    margin: 10px 0;
+}
+
+.radio-group label {
+    display: inline-block;
+    margin: 5px 0;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition douce */
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 10px;
+}
+
+.radio-group label:hover {
+    background-color: #41D1B1; /* Changement de couleur au survol */
+}
+
+.error {
+    color: red;
+    display: none;
+}
+
+/* Conteneur du champ de texte */
+.input-container {
+    display: flex; /* Utiliser Flexbox pour aligner le champ de texte et le bouton */
+    
+    margin: 10px 0; /* Espacement autour du conteneur */
+}
+
+/* Style du champ de texte */
+input[type="text"] {
+    width: 100%; /* Largeur à 100% */
+    padding: 10px; /* Espace intérieur */
+    margin-right: 10px; /* Espacement à droite */
+    border: 1px solid #ccc; /* Bordure grise */
+    border-radius: 20px; /* Coins arrondis */
+    font-size: 16px; /* Taille de la police */
+    outline: none; /* Enlever le contour par défaut */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transition douce */
+}
+
+/* Style au focus */
+input[type="text"]:focus {
+    border-color: #41D1B1; /* Couleur de la bordure au focus */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Ombre plus prononcée au focus */
+}
+
+/* Style du bouton d'envoi */
+button {
+    background-color: #41D1B1; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    padding: 10px 15px; /* Espace intérieur */
+    border: none; /* Pas de bordure */
+    border-radius: 20px; /* Coins arrondis */
+    cursor: pointer; /* Changer le curseur au survol */
+    font-size: 16px; /* Taille de la police */
+    transition: background-color 0.3s; /* Transition douce pour le changement de couleur */
+}
+
+button i {
+    font-size: 20px; /* Taille de l'icône */
+}
+
+/* Effet au survol du bouton */
+button:hover {
+    background-color: #41d1b27e; /* Couleur plus foncée au survol */
+}
+
+.separator {
+    height: 2px; /* Hauteur de la ligne */
+    background-color: #ccc; /* Couleur de la ligne */
+    margin: 5px 0; /* Espacement au-dessus et en dessous */
+}
+
+#exit-btn {
+    margin-top: 10px;             /* Espacement au-dessus du bouton */
+    padding: 10px;                /* Espacement intérieur */
+    background-color: #d9534f;    /* Couleur de fond rouge */
+    color: white;                 /* Couleur du texte */
+    border: none;                 /* Pas de bordure */
+    border-radius: 10px;          /* Coins arrondis */
+    cursor: pointer;              /* Curseur de main */
+    font-size: 16px;              /* Taille de la police */
+    height: 40px;                 /* Hauteur du bouton */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition douce */
+}
+
+#exit-btn:hover {
+    background-color: #d9544f81; /* Couleur plus foncée au survol */
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+}
+
+
+/* Style pour le bouton "Yes" */
+#assistance-button-yes {
+    background-color: #41D1B1; /* Vert */
+    color: white;
+}
+
+#assistance-button-yes:hover {
+    background-color: #3bb39c; /* Vert foncé au survol */
+    border-color: #3bb39c;
+}
+
+/* Style pour le bouton "No" */
+#assistance-button-no {
+    background-color: #dc3545; /* Rouge */
+    color: white;
+}
+
+#assistance-button-no:hover {
+    background-color: #c82333; /* Rouge foncé au survol */
+    border-color: #bd2130;
+}

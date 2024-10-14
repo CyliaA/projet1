@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Experience</title>
+   
+</head>
+<body>
+
+    <div class="surv">
+        <h1>Sign In</h1>
+
+        <!-- Username -->
+        <div class="textarea-container">
+            <label for="username">Username:</label>
+            <textarea id="username" placeholder="Enter your username"></textarea>
+        </div>
+
+        <!-- Email -->
+        <div class="textarea-container">
+            <label for="email">Email:</label>
+            <textarea id="email" placeholder="Enter your email"></textarea>
+        </div>
+
+        <!-- Radio Buttons for Profession or Individual -->
+        <div class="radio-group1">
+            <label>Are you responding as:</label>
+            <div class="radio-option1">
+                <input type="radio" id="professional" name="user_type" value="Professional">
+                <label for="professional">Professional</label>
+            </div>
+            <div class="radio-option1">
+                <input type="radio" id="individual" name="user_type" value="Individual">
+                <label for="individual">Individual</label>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button class="rating-btn submit-btn">Submit</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@azure/cosmos@4.1/dist/index.min.js"></script>
+    <script src="usernamePage.js"></script> <!-- Lien vers le fichier JavaScript -->
+  
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Experience</title>
+</head>
+<body>
+
+    <div class="survey-container">
+
+        <!-- Questions -->
+        <div id="question-1" class="question active">
+            <h1 id="main-question">How well do you feel you are currently balancing the various roles in your life (e.g., work, family, personal time)?</h1>
+            <div class="rating-buttons">
+                <button class="rating-btn" onclick="nextQuestion(1)">Verry well</button>
+                <button class="rating-btn" onclick="nextQuestion(1)">Somewhat well</button>
+                <button class="rating-btn" onclick="nextQuestion(1)">Neutral</button>
+                <button class="rating-btn" onclick="nextQuestion(1)">Not well</button>
+                <button class="rating-btn" onclick="nextQuestion(1)">Very poorly</button>
+            </div>
+        </div>
+
+        <div id="question-2" class="question">
+            <h1 id="main-question">Which life role do you find the hardest to balance ?</h1>
+            <div class="rating-buttons">
+                <button class="rating-btn" onclick="nextQuestion(2)">Career</button>
+                <button class="rating-btn" onclick="nextQuestion(2)">Family</button>
+                <button class="rating-btn" onclick="nextQuestion(2)">Personal hobbies</button>
+                <button class="rating-btn" onclick="nextQuestion(2)">Self-care</button>
+                <button class="rating-btn" onclick="nextQuestion(2)">Social life</button>
+                <button class="rating-btn" onclick="nextQuestion(2)">Other</button>
+            </div>
+        </div>
+
+       
+        <!-- Partie dans le fichier HTML -->
+    <div id="question-3" class="question">
+    <h1 id="main-question">What strategies have you found most helpful in balancing your different life roles ?</h1>
+    <textarea id="exercise_routine" placeholder="Describe your routine..."></textarea><br>
+    <button class="rating-btn submit-btn" onclick="submitSurvey()">Submit</button>
+
+    </div>
+
+
+</body>
+</html>

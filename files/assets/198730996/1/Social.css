@@ -1,0 +1,108 @@
+/* Style de base du corps */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;  /* Couleur de fond douce */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+ }
+
+/* Conteneur principal */
+.survey-container {
+    text-align: center;
+    background-color: #ADAAAA; /* Fond blanc avec une légère transparence */
+    padding: 40px;
+    border-radius: 15px; /* Coins arrondis pour un look moderne */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Ombre douce */
+    max-width: 600px;  /* Largeur maximale pour le conteneur */
+    width: 100%;  /* Largeur responsive */
+    height: 300px;  /* Hauteur fixe pour le conteneur */
+    position: relative;
+}
+
+/* Titre de la question principale */
+#main-question {
+    font-size: 26px;
+    font-weight: bold;
+    color: #2e3a59;  /* Couleur de texte pour le titre */
+    margin-bottom: 30px;
+}
+
+/* Boutons de notation */
+.rating-buttons {
+    display: flex;  /* Utiliser flexbox pour l'alignement horizontal */
+    justify-content: center; /* Centrer les boutons */
+    flex-wrap: wrap; /* Permettre aux boutons de passer à la ligne si l'espace est insuffisant */
+    margin: 10px 0;
+}
+
+.rating-btn {
+    background-color: #ffffff;
+    border: 2px solid #d1d1d1;
+    border-radius: 10px;
+    color: #2e3a59;
+    font-size: 18px;
+    font-weight: bold;
+    width: 150px;  /* Largeur fixe pour les boutons */
+    height: 50px;  /* Hauteur fixe pour les boutons */
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    margin: 5px;  /* Espacement entre les boutons */
+}
+
+.rating-btn:hover {
+    background-color: #e7f0fd;  /* Couleur de fond lors du survol */
+    transform: scale(1.1);  /* Effet de zoom */
+}
+
+.rating-btn:active {
+    background-color: #d1e4f9;  /* Couleur de fond lors du clic */
+    border-color: #007bff;  /* Changer la couleur de la bordure lors du clic */
+}
+
+/* Cacher toutes les questions sauf celle active */
+.question {
+    display: none;  /* Masquer toutes les questions par défaut */
+}
+
+.question.active {
+    display: inline-block;  /* Afficher seulement la question active */
+}
+
+/* Textarea pour les questions ouvertes */
+textarea {
+    width: 80%;  /* Largeur du textarea */
+    height: 150px;  /* Hauteur du textarea */
+    border: 2px solid #d1d1d1;  /* Bordure du textarea */
+    border-radius: 10px;  /* Coins arrondis */
+    padding: 15px;  /* Espacement interne */
+    font-size: 16px;  /* Taille de la police */
+    background-color: #f9f9f9;  /* Couleur de fond */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;  /* Transition pour les effets */
+    outline: none;  /* Supprimer l'outline par défaut */
+    resize: none;  /* Désactiver le redimensionnement */
+}
+
+/* Effet de focus sur le textarea */
+textarea:focus {
+    border-color: #007bff;  /* Couleur de bordure lors du focus */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);  /* Ombre lors du focus */
+    background-color: #ffffff;  /* Couleur de fond lors du focus */
+}
+
+/* Améliorer le bouton de soumission */
+button.rating-btn.submit-btn {
+    margin-top: 20px;  /* Espacement au-dessus du bouton de soumission */
+    background-color: #28a745;  /* Couleur de fond du bouton de soumission */
+    color: white;  /* Couleur du texte */
+}
+
+button.rating-btn.submit-btn:hover {
+    background-color: #218838;  /* Couleur de fond lors du survol */
+}
+
+button.rating-btn.submit-btn:active {
+    background-color: #1e7e34;  /* Couleur de fond lors du clic */
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Experience</title>
+</head>
+<body>
+
+    <div class="survey-container">
+
+        <!-- Questions -->
+        <div id="question-1" class="question active">
+            <h1 id="main-question">How often do you exercise in a week?</h1>
+            <div class="rating-buttons">
+                <button class="rating-btn" onclick="nextQuestion(1)">Not at all</button>
+                <button class="rating-btn" onclick="nextQuestion(1)">1-2 times</button>
+                <button class="rating-btn" onclick="nextQuestion(1)">3-4 times</button>
+                <button class="rating-btn" onclick="nextQuestion(1)">5-7 times</button>
+                <button class="rating-btn" onclick="nextQuestion(1)">More than 7 times a week</button>
+            </div>
+        </div>
+
+        <div id="question-2" class="question">
+            <h1 id="main-question">How often do you feel a sense of accomplishment after exercising?</h1>
+            <div class="rating-buttons">
+                <button class="rating-btn" onclick="nextQuestion(2)">Everytime</button>
+                <button class="rating-btn" onclick="nextQuestion(2)">Most of the time</button>
+                <button class="rating-btn" onclick="nextQuestion(2)">Sometimes</button>
+                <button class="rating-btn" onclick="nextQuestion(2)">Rarely</button>
+                <button class="rating-btn" onclick="nextQuestion(2)">Never</button>
+                <button class="rating-btn" onclick="nextQuestion(2)">Not applicable</button>
+            </div>
+        </div>
+
+       
+        <!-- Partie dans le fichier HTML -->
+    <div id="question-3" class="question">
+    <h1 id="main-question"> How often do you exercise in a week? Please describe your typical exercise routine.</h1>
+    <textarea id="exercise_routine" placeholder="Describe your routine..."></textarea><br>
+    <button class="rating-btn submit-btn" onclick="submitSurvey()">Submit</button>
+
+    </div>
+   
+
+</body>
+</html>

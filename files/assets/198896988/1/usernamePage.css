@@ -1,0 +1,109 @@
+/* Style de base du corps */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;  /* Couleur de fond douce */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Conteneur principal */
+.surv {
+    text-align: center;
+    background-color: #ADAAAA; /* Fond blanc avec une légère transparence */
+    padding: 60px;
+    border-radius: 15px; /* Coins arrondis pour un look moderne */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Ombre douce */
+    max-width: 600px;  /* Largeur maximale pour le conteneur */
+    width: 100%;  /* Largeur responsive */
+    position: relative;
+    width: 500px;
+  
+}
+
+/* Titre principal */
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #2e3a59;  /* Couleur de texte pour le titre */
+    margin-bottom: 30px;
+}
+
+/* Textarea pour username et email */
+.textarea-container {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.textarea-container label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2e3a59;
+}
+
+textarea {
+    width: 100%;  /* Largeur du textarea */
+    height: 30px;  /* Hauteur du textarea */
+    border: 2px solid #d1d1d1;  /* Bordure du textarea */
+    border-radius: 10px;  /* Coins arrondis */
+    padding: 10px;  /* Espacement interne */
+    font-size: 16px;  /* Taille de la police */
+    background-color: #f9f9f9;  /* Couleur de fond */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;  /* Transition pour les effets */
+    outline: none;  /* Supprimer l'outline par défaut */
+    resize: none;  /* Désactiver le redimensionnement */
+}
+
+/* Effet de focus sur le textarea */
+textarea:focus {
+    border-color: #007bff;  /* Couleur de bordure lors du focus */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);  /* Ombre lors du focus */
+    background-color: #ffffff;  /* Couleur de fond lors du focus */
+}
+
+/* Groupe des boutons radio pour Profession ou Individuel */
+.radio-group1 {
+    margin: 20px 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* Aligner verticalement */
+}
+
+.radio-group1 label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2e3a59;
+    margin-bottom: 10px;
+}
+
+.radio-group1 input[type="radio"] {
+    margin-right: 10px;
+}
+
+.radio-option1 {
+    margin: 5px 0;
+}
+
+/* Bouton de soumission */
+button.rating-btn.submit-btn {
+    margin-top: 20px;
+    background-color: #41D1B1;  /* Couleur de fond du bouton de soumission */
+    color: white;  /* Couleur du texte */
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.rating-btn.submit-btn:hover {
+    background-color: #41D1B1;  /* Couleur de fond lors du survol */
+}
+
+button.rating-btn.submit-btn:active {
+    background-color: #41D1B1;  /* Couleur de fond lors du clic */
+}
